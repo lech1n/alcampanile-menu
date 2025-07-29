@@ -1,34 +1,34 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import menuData from "./data"
 
 function App() {
-  const [count, setCount] = useState(0)
+  const categories = Object.keys(menuData);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app-container">
+      <header>
+        <h1>Al Campanile</h1>
+        <p className="subtitle">Menu</p>
+      </header>
+
+      {categories.map((category) => (
+        <section key={category} className="menu-section">
+          <h2 className="category-title">{category.charAt(0).toUpperCase() + category.slice(1)}</h2>
+          <ul>
+            {menuData[category].map(({ name, description, price }) => (
+              <li key={name} className="menu-item">
+                <div className="menu-item-header">
+                  <span className="dish-name">{name}</span>
+                  <span className="dish-price">€  {price.toFixed(2)}</span>
+                </div>
+                {description && <p className="dish-description">{description}</p>}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
   )
 }
 
