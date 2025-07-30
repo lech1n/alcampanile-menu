@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import menuData from "./data"
+import logo from "./assets/logoo.png"
 
 function App() {
   const categories = Object.keys(menuData);
@@ -8,7 +9,9 @@ function App() {
   return (
     <div className="app-container">
       <header>
-        <h1>Al Campanile</h1>
+        <div className='header_container'>
+        <img src={logo} alt='logo' />
+        </div>
         <p className="subtitle">Menu</p>
       </header>
 
