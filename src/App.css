@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Manrope:wght@200..800&display=swap');
 
+html {
+  scroll-behavior: smooth; 
+}
+
 body {
-  margin: 0; /* soft parchment beige */
-  background-color: #180e08; 
+  margin: 0; 
+  background: url('./assets/bg.png') center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: #FFFAFA ;
-  text-shadow: 1px solid black; /* deep espresso brown */
+  text-shadow: 1px solid black; 
   font-family: "Manrope", sans-serif;
 }
+
 
 .app-container {
   max-width: 800px;
@@ -34,27 +42,67 @@ header {
 }
 
 .subtitle {
-  color: #c99c21;  /* wine red */
-  font-weight: 700;
+  color: #FFFAFA ; 
+  padding: 0;
+  font-weight: 800;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  font-size: 1.1rem;
-  padding-bottom: 1.2em;
+  font-size: 1.5rem;
+  text-shadow: 0px 0px 1px black;
 }
 
+.subtitle-1{
+  padding-bottom: 1.2em;
+  text-shadow: 0px 0px 1px black;
+  font-size: 1.1rem;
+}
+
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;         
+  justify-content: center;  
+  gap: 10px;               
+  margin: 16px 0;
+}
+
+
+.category-btn {
+  padding: 8px 16px;
+  border: 2px solid #8B5E3C; 
+  border-radius: 8px;
+  text-decoration: none;
+  color: #FFFAFA ;
+  font-weight: 500; 
+  transition: all 0.2s ease-in-out;
+}
+
+.category-btn:hover {
+  background-color: #8B5E3C;
+  color: #FFFAFA ;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 300px) {
+  .category-btn {
+    flex: 1 1 45%; 
+    text-align: center;
+  }
+}
 .menu-section {
   margin-bottom: 2.5rem;
 }
 
 .category-title {
   font-size: 1.5rem;
-  color: #c99c21; 
+  color: #FFFAFA ; 
   font-weight: 800;
    margin: 0;
-   padding-top: 1.1em;
+   padding-top: 1.4em;
   padding-bottom: .6em;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+  text-shadow: 0px 0px 1px black;
 }
  ul{
   padding: 0;
@@ -63,7 +111,7 @@ header {
 .menu-item {
   padding: 0.7em 0;
   list-style-type: none;
-  border-bottom: 0.8px solid #43372f;
+  border-bottom: 0.7px solid #c4c2c2;
 }
 
 .menu-item-header {
@@ -75,6 +123,7 @@ header {
 .dish-name {
   font-size: 1rem;
   font-weight: 800;
+  text-shadow: 0px 0px 1px black;
   flex: 1;          
   word-wrap: break-word;
 }
@@ -85,11 +134,13 @@ header {
   font-weight: 800;
   flex-shrink: 0;    
   white-space: nowrap;
+  text-shadow: 0px 0px 1px black;
 }
 
 .dish-description {
   font-size: 0.9rem;
   margin-top: 0.2rem;
   color: #FFFAFA ; 
-  font-weight: 200;
+  font-weight: 300;
+  text-shadow: 0px 0px 1px black;
 }

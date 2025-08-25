@@ -85,7 +85,7 @@ const menuData = {
       { name: "A Mia Moglie", description: "crema di zucca, fior di latte, melanzane a funghetto, guanciale croccante, chips di parmigiano", price: 11 },
       { name: "La Fata Bianca", description: "crema di zucchine, fior di latte, speck croccante, burrata", price: 10 },
       { name: "Fumé", description: "fior di latte affumicato, funghi porcini, porchetta", price: 9 },
-      { name: "4 Stagioni a Modo Mio (4 gusti)", description: "fior di latte, cime di rapa, guanciale croccante, pomodoro, fior di latte, basilico, fior di latte, patate al forno, porchetta, scaglie di grana, fior di latte, pomodorini, rucola, scaglie di grana, perle di glassa balsamica", price: 10 },
+      { name: "4 Stagioni a Modo Mio (4 gusti)", description: "fior di latte, cime di rapa, guanciale croccante │  pomodoro, fior di latte, basilico │ fior di latte, patate al forno, porchetta, scaglie di grana │ fior di latte, pomodorini, rucola, scaglie di grana, perle di glassa balsamica", price: 10 },
     ],
     "Birre": [
       { name: "Beck’s 0,33 l", price: 3.5 },
