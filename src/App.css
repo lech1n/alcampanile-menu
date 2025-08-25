@@ -8,7 +8,7 @@ html {
 body {
   margin: 0; 
   background: url('./assets/bg.png') center/cover no-repeat;
-  background-size: cover;
+  background-size: containgit;
   background-position: center;
   background-attachment: fixed;
   color: #FFFAFA ;
